@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="accordian">
+      <div class="image">
+        <img class="woman" src="/images/illustration-woman-online-desktop.svg" alt="">
+        <img src="/images/illustration-woman-online-mobile.svg" alt="" class="womanMobile">
+        <img class="box" src="/images/illustration-box-desktop.svg" alt="">
+      </div>
+      <div class="faq">
+        <h1>FAQ</h1>
+        <div class="allQurestions">
+          <div class="decoration">
+            <div class="question">
+              <h2 onclick="accordianOne()" class="QuestionUnactive">How many team members can I invite?</h2><img onclick="accordianOne()" class="arrow" src="/images/icon-arrow-down.svg" alt="">
+            </div>
+            <div class="answer ParaUnactive">
+              <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.</p>
+            </div>
+          </div>
+          <div class="decoration">
+            <div class="question">
+              <h2 onclick="accordianTwo()" class=" QuestionUnactive">What is the maximum file upload size?</h2><img onclick="accordianTwo()" class="arrow" src="/images/icon-arrow-down.svg" alt="">
+            </div>
+            <div class="answer ParaUnactive">
+              <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </div>
+          </div>
+          <div class="decoration">
+            <div class="question">
+              <h2 onclick="accordianThree()" class="QuestionUnactive">How do I reset my password?</h2><img onclick="accordianThree()" class="arrow" src="/images/icon-arrow-down.svg" alt="">
+            </div>
+            <div class="answer ParaUnactive">
+              <p> Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.</p>
+            </div>
+          </div>
+          <div class="decoration">
+            <div class="question">
+              <h2 onclick="accordianFour()" class="QuestionUnactive">Can I cancel my subscription?</h2><img onclick="accordianFour()" class="arrow" src="/images/icon-arrow-down.svg" alt="">
+            </div>
+            <div class="answer ParaUnactive">
+              <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </div>
+          </div>
+          <div class="decoration">
+            <div class="question">
+              <h2 onclick="accordianFive()" class="QuestionUnactive">Do you provide additional support?</h2><img onclick="accordianFive()" class="arrow" src="/images/icon-arrow-down.svg" alt="">
+            </div>
+            <div class="answer ParaUnactive">
+              <p> Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Sujood-Qureshi">Sujood Qureshi</a>.
+    </div>
+  </footer>
+</body>
+
+</html>

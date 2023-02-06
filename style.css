@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* text  */
+    --VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --SoftRed: hsl(14, 88%, 65%);
+    --VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+    --DarkGrayishBlue: hsl(240, 6%, 50%);
+    /* gradient */
+    --SoftViolet: hsl(273, 75%, 66%);
+    --SoftBlue: hsl(240, 73%, 65%);
+    /* Dividers */
+    --LightGrayishBlue: hsl(240, 5%, 91%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, var(--SoftViolet), var(--SoftBlue));
+}
+
+.accordian {
+    background: white;
+    display: flex;
+    width: 60%;
+    height: 80%;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+}
+
+.image {
+    width: 27rem;
+    height: 29rem;
+    display: flex;
+    align-items: center;
+    background: url(/images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position-x: -8rem;
+}
+
+.image>.woman {
+    width: 100%;
+    height: 70%;
+    margin-left: -3.5rem;
+
+}
+
+.image>.womanMobile {
+    display: none;
+}
+
+.image>.box {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    left: -3.7rem;
+    top: 43%;
+}
+
+.faq {
+    width: 46%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question>.QuestionUnactive {
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.answer>p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.decoration {
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px 1px 1px 1px;
+    border-bottom: 1px solid var(--LightGrayishBlue);
+}
+
+/* hover effect */
+.question>.QuestionUnactive:hover {
+    color: var(--SoftRed);
+}
+
+.question>.QuestionActive:hover {
+    color: black;
+}
+
+/* javascript css  */
+.arrow {
+    width: 12px;
+    height: 12px;
+    transform: rotate(360deg);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.arrowUp {
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+
+.ParaUnactive {
+    display: none;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.ParaActive {
+    display: block;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.QuestionActive {
+    font-weight: 700 !important;
+}
+
+
+
+
+/* media query  */
+
+@media screen and (max-width : 426px) {
+    .accordian {
+        width: 85%;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 4rem;
+        border-radius: 15px;
+    }
+
+    .image>.woman {
+        display: none;
+
+    }
+
+    .image>.womanMobile {
+        width: 75%;
+        display: block;
+        margin-top: -1rem;
+        position: absolute;
+        background: url('/images/bg-pattern-mobile.svg');
+        height: 47%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .image>.box {
+        display: none;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background: none;
+        overflow: auto;
+    }
+
+    .faq {
+        width: 100%;
+        margin-top: 5rem;
+        gap: 1rem;
+    }
+
+    .faq h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width : 769px) {
+    .accordian {
+        width: 60%;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 6rem;
+        border-radius: 15px;
+    }
+
+    .image>.woman {
+        display: none;
+
+    }
+
+    .image>.womanMobile {
+        width: 60%;
+        display: block;
+        margin-top: -1rem;
+        position: absolute;
+    }
+
+    .image>.box {
+        display: none;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background: none;
+        overflow: auto;
+    }
+
+    .faq {
+        width: 100%;
+        margin-top: 6rem;
+        gap: 1rem;
+    }
+
+    .faq h1 {
+        text-align: start;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width : 1025px) {
+    .accordian {
+        width: 80%;
+    }
+}
